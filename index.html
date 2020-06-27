@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Website</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/143b46e58e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather</h1>
+      <ul>
+        <li>
+          Friday 2:00
+        </li>
+      </ul>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>City</h2>
+        </div>
+        <div class="col-md-8">
+          <i class="fas fa-cloud-sun"></i>
+          <small>
+            <span>75</span>
+            F | C
+          </small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Weather Information</h5>
+          <ul>
+            <li>
+              Feels Like: 80
+            </li>
+            <li>
+              High Temp: 86
+            </li>
+            <li>
+              Low Temp: 56
+            </li>
+            <li>
+              Humidity: 40%
+            </li>
+            <li>
+              Wind: 5 mph
+            </li>
+          </ul>
+          </div>
+          <div class="col-md-8">
+            <h5>Hourly</h5>
+            <div class="card" style="width: 8rem;">
+              <i class="fas fa-cloud-sun"></i>
+                <div class="card-body">
+                  <h5 class="card-title">3 PM</h5>
+                  <p class="card-text">78°F</p>
+          </div>
+        </div>
+      </div>
+      <small>
+        <h5>5 Day Forecast</h5>
+        <div class="col-2">
+          <div class="card" style="width: 10rem;">
+            <i class="fas fa-cloud-sun"></i>
+              <div class="card-body">
+                <h5 class="card-title">Saturday</h5>
+                <p class="card-text">77°F/55°F</p>
+              </div>
+            </div>
+      </div>
+      </small>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
