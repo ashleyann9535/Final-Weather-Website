@@ -17,20 +17,21 @@
     <div class="container">
       <h1>Weather</h1>
       <ul>
-        <li>
+        <li class="date">
           Friday 2:00
         </li>
       </ul>
       <div class="row">
         <div class="col-md-4">
           <h2>City</h2>
+          <footer class="highLow">86°/54°</footer> 
         </div>
-        <div class="col-md-8">
-          <i class="fas fa-cloud-sun"></i>
-          <small>
-            <span>75</span>
+        <div class="col-md-8 currentTemp">
+          <i class="fas fa-cloud-sun tempImage"></i> 
+          <div class="temperature">
+            <span class="degrees">75°</span>
             F | C
-          </small>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -38,13 +39,7 @@
           <h5>Weather Information</h5>
           <ul>
             <li>
-              Feels Like: 80
-            </li>
-            <li>
-              High Temp: 86
-            </li>
-            <li>
-              Low Temp: 56
+              Feels Like: 80°
             </li>
             <li>
               Humidity: 40%

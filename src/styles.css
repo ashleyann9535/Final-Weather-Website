@@ -1,0 +1,64 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+}
+
+h1 {
+  color: #111d5e;
+  font-size: 50px;
+  padding: 20px;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  color: #1b1d45;
+  font-size: 80px;
+  font-weight: bold;
+  margin: 0;
+}
+.highLow {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  right: 70px;
+}
+.currentTemp {
+  border: 5px solid #111d5e;
+  border-radius: 90px;
+  max-width: 250px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tempImage {
+  display: block;
+  text-align: center;
+  padding: 0;
+  font-size: 40px;
+}
+
+.degrees {
+  font-size: 80px;
+  padding: 0;
+  color: #1b1d45;
+}
+.temperature {
+  font-size: 25px;
+}
+i {
+  text-align: center;
+  font-size: 30px;
+}
+
+h5 {
+  color: #1b1d45;
+  font-weight: bolder;
+}
+
+.card-body {
+  text-align: center;
+}
