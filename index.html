@@ -18,25 +18,26 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
       <h1>Weather</h1>
       <ul>
-        <li class="date">
-          Last Updated: Friday 2:00
-        </li>
+        <li class="date">Last Updated: <small id="date"></small></li>
       </ul>
       <div class="row">
-        <div class="col-md-4">
-          <h2>City</h2>
-          <footer class="highLow">86°/54°</footer>
+        <div class="col-md-5">
+          <h2 id="city"></h2>
+          <footer class="highLow">
+            <small id="maxTemp"></small> / <small id="minTemp"></small>
+          </footer>
         </div>
-        <div class="col-md-8 currentTemp">
+        <div class="col-md-7 currentTemp">
           <i class="fas fa-cloud-sun tempImage"></i>
           <div class="temperature">
-            <span class="degrees">75°</span>
+            <span class="degrees" id="degrees"></span>
             <a href="#"> F </a>
             |
             <a href="#"> C </a>
@@ -47,15 +48,9 @@
         <div class="col-md-3">
           <h5>Weather Information</h5>
           <ul>
-            <li>
-              Feels Like: 80°
-            </li>
-            <li>
-              Humidity: 40%
-            </li>
-            <li>
-              Wind: 5 mph
-            </li>
+            <li>Feels Like: <small id="feelsLike"></small>°</li>
+            <li>Humidity: <small id="humidity"></small>%</li>
+            <li>Wind: <small id="windSpeed"></small>mph</li>
           </ul>
         </div>
         <div class="col-md-3">
