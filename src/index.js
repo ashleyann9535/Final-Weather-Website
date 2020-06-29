@@ -45,7 +45,19 @@ function displayTemp(response) {
   dateElement.innerHTML = updateDate(response.data.dt * 1000);
 }
 
-let city = "Chicago";
-let apiKey = "d26daee782ed7569b86130dfdffeb3ee";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-axios.get(apiUrl).then(displayTemp);
+function search(city) {
+  let apiKey = "d26daee782ed7569b86130dfdffeb3ee";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayTemp);
+}
+
+function formSubmit(event) {
+  event.preventDefault();
+  let citySearchElement = document.querySelector("#citySearch");
+  search(citySearchElement.value);
+}
+
+let form = document.querySelector("#searchForm");
+form.addEventListener("submit", formSubmit);
+
+search("Chicago");
