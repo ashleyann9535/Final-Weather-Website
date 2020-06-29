@@ -51,6 +51,21 @@ h2 {
 .temperature {
   font-size: 25px;
 }
+.active {
+  color: #111d5e;
+}
+:hover .active {
+  text-decoration: none;
+  cursor: default;
+}
+.inactive {
+  color: #111d5e;
+  font-size: 15px;
+}
+:hover .active {
+  text-decoration: none;
+  cursor: default;
+}
 i {
   text-align: center;
   font-size: 30px;

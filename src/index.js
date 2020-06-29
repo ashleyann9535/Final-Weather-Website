@@ -24,7 +24,6 @@ function updateDate(timestamp) {
 function displayTemp(response) {
   console.log(response.data);
   let cityTemp = document.querySelector("#degrees");
-  let degrees = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
   let maxTempElement = document.querySelector("#maxTemp");
   let maxTemp = Math.round(response.data.main.temp_max);
@@ -34,6 +33,8 @@ function displayTemp(response) {
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#windSpeed");
   let dateElement = document.querySelector("#date");
+
+  degrees = Math.round(response.data.main.temp);
 
   cityTemp.innerHTML = `${degrees}°`;
   cityElement.innerHTML = response.data.name;
@@ -57,7 +58,32 @@ function formSubmit(event) {
   search(citySearchElement.value);
 }
 
+function displayCelsius(event) {
+  event.preventDefault();
+  let degreesElement = document.querySelector("#degrees");
+  linkC.classList.remove("inactive");
+  linkF.classList.add("inactive");
+  let tempC = Math.round((degrees - 32) * (5 / 9));
+  degreesElement.innerHTML = `${tempC}°`;
+}
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let degreesElement = document.querySelector("#degrees");
+  linkF.classList.remove("inactive");
+  linkC.classList.add("inactive");
+  degreesElement.innerHTML = `${degrees}°`;
+}
+
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", formSubmit);
+
+let linkC = document.querySelector("#linkC");
+linkC.addEventListener("click", displayCelsius);
+
+let linkF = document.querySelector("#linkF");
+linkF.addEventListener("click", displayFahrenheit);
+
+let degrees = null;
 
 search("Chicago");
