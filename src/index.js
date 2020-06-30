@@ -52,13 +52,14 @@ function displayTemp(response) {
 }
 
 function dispalyHourForecast(response) {
+  console.log(response.data);
   let hourlyForecastElement = document.querySelector("#hourlyForecast");
   hourlyForecast = null;
   hourlyForecastElement.innerHTML = null;
 
   for (let index = 0; index < 3; index++) {
     hourlyForecast = response.data.list[index];
-    hourlyForecastElement.innerHTML += `<div class="row-cols-3"> <div class="col-2"> <div class="card" id="hourlyForecast" style="width: 6rem;">
+    hourlyForecastElement.innerHTML += `<div class="row-cols-3"> <div class="col-2" id="threeHour"> <div class="card" id="hourlyForecast" style="width: 6rem;">
           <i class="fas fa-cloud-sun"></i>
           <div class="card-body">
           <h5 class="card-title" id="hourlyTemp"> ${Math.round(
@@ -92,8 +93,8 @@ function formSubmit(event) {
 function displayCelsius(event) {
   event.preventDefault();
   let degreesElement = document.querySelector("#degrees");
-  linkC.classList.remove("inactive");
-  linkF.classList.add("inactive");
+  linkC.classList.remove("active");
+  linkF.classList.add("active");
   let tempC = Math.round((degrees - 32) * (5 / 9));
   degreesElement.innerHTML = `${tempC}°`;
 }
@@ -101,8 +102,8 @@ function displayCelsius(event) {
 function displayFahrenheit(event) {
   event.preventDefault();
   let degreesElement = document.querySelector("#degrees");
-  linkF.classList.remove("inactive");
-  linkC.classList.add("inactive");
+  linkF.classList.remove("active");
+  linkC.classList.add("active");
   degreesElement.innerHTML = `${degrees}°`;
 }
 
