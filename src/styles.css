@@ -40,11 +40,12 @@ li {
   text-align: center;
 }
 
-.tempImage {
+#mainIcon {
   display: block;
-  text-align: center;
+  position: relative;
+  left: 65px;
   padding: 0;
-  font-size: 40px;
+  width: 90px;
 }
 
 .degrees {
