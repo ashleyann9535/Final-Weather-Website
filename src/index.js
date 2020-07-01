@@ -69,7 +69,7 @@ function displayHourForecast(response) {
         <img src="http://openweathermap.org/img/wn/${
           hourlyForecast.weather[0].icon
         }@2x.png" class="card-img-top" id="hourlyIcon">
-          <h5 class="card-title">${Math.round(hourlyForecast.main.temp)}°</h5>
+          <h5 class="card-title">${Math.round(hourlyForecast.main.temp)}°F</h5>
           <p class="card-text">${formatTime(hourlyForecast.dt * 1000)}</p>
     </div>
 `;
@@ -94,8 +94,8 @@ function formSubmit(event) {
 function displayCelsius(event) {
   event.preventDefault();
   let degreesElement = document.querySelector("#degrees");
-  linkC.classList.remove("active");
-  linkF.classList.add("active");
+  linkC.classList.remove("inactive");
+  linkF.classList.add("inactive");
   let tempC = Math.round((degrees - 32) * (5 / 9));
   degreesElement.innerHTML = `${tempC}°`;
 }
@@ -103,8 +103,8 @@ function displayCelsius(event) {
 function displayFahrenheit(event) {
   event.preventDefault();
   let degreesElement = document.querySelector("#degrees");
-  linkF.classList.remove("active");
-  linkC.classList.add("active");
+  linkF.classList.remove("inactive");
+  linkC.classList.add("inactive");
   degreesElement.innerHTML = `${degrees}°`;
 }
 

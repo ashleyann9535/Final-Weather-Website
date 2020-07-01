@@ -66,13 +66,23 @@ li {
 }
 .active {
   color: #111d5e;
-  font-size: 15px;
 }
 :hover .active {
   color: #111d5e;
   text-decoration: none;
   cursor: default;
 }
+
+.inactive {
+  color: #111d5e;
+  font-size: 15px;
+}
+:hover .inactive {
+  color: #111d5e;
+  text-decoration: none;
+  cursor: default;
+}
+
 i {
   text-align: center;
   font-size: 30px;
@@ -81,7 +91,7 @@ i {
 .weatherInfo,
 .threeHourForecast {
   position: relative;
-  bottom: 80px;
+  bottom: 70px;
 }
 
 h5 {
