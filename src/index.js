@@ -64,19 +64,15 @@ function dispalyHourForecast(response) {
 
   for (let index = 0; index < 3; index++) {
     hourlyForecast = response.data.list[index];
-    hourlyForecastElement.innerHTML += `<div class="row-cols-3"> <div class="col-2" id="threeHour"> <div class="card" id="hourlyForecast" style="width: 6rem;">
-          <i class="fas fa-cloud-sun"></i>
-          <div class="card-body">
-          <h5 class="card-title" id="hourlyTemp"> ${Math.round(
-            hourlyForecast.main.temp
-          )}</h5>
-          <p class="card-text" id="hourlyTemp"> ${formatTime(
-            hourlyForecast.dt * 1000
-          )}
-           </p>
-      </div> 
-      </div>
-      </div>`;
+    hourlyForecastElement.innerHTML += `
+    <div class="row">
+    <div class="col-2">
+        <img src="#" class="card-img-top" id="hourlyIcon">
+          <h5 class="card-title">${Math.round(hourlyForecast.main.temp)}°</h5>
+          <p class="card-text">${formatTime(hourlyForecast.dt * 1000)}</p>
+    </div>
+    </div>
+`;
   }
 }
 

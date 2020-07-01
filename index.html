@@ -31,13 +31,13 @@
         <li class="date">Last Updated: <small id="date"></small></li>
       </ul>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-4">
           <h2 id="city"></h2>
           <footer class="highLow">
             <small id="maxTemp"></small> / <small id="minTemp"></small>
           </footer>
         </div>
-        <div class="col-md-7 currentTemp">
+        <div class="col-md-8 currentTemp">
           <img src="#" class="card-img-top" id="mainIcon">
           <div class="temperature">
             <span class="degrees" id="degrees"></span>
@@ -47,8 +47,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-3">
+      <div class="weatherInfo">
           <h5>Weather Information</h5>
           <ul>
             <li class="info">Feels Like: <small id="feelsLike"></small>°</li>
@@ -56,21 +55,15 @@
             <li class="info">Wind: <small id="windSpeed"></small>mph</li>
           </ul>
         </div>
-        <div class="col-md-3">
+        <div class="threeHourForecast">
           <h5>Hourly</h5>
-          <div class="row-cols-3">
-          <div class="col-md-2" id="threeHour">
-            <div class="card hourlyForecast" id="hourlyForecast" style="width: 6rem;">
-              <i class="fas fa-cloud-sun"></i>
-              <div class="card-body hourly">
-                <h5 class="card-title" id="hourlyTemp">78°F</h5>
-                <p class="card-text">3 PM</p>
-              </div>
-          </div>
+          <div class="row" id="hourlyForecast">
+            <div class="col-mb-2">
+                <img src="#" class="card-img-top" id="hourlyIcon">
+                  <h5 class="card-title">78</h5>
+                  <p class="card-text">3 PM</p>
+            </div>
         </div>
-      </div>
-        </div>
-      </div>
       <h6 class="gitSite">
         <a href="https://github.com/ashleyann9535/Final-Weather-Website">
           Open source code</a
