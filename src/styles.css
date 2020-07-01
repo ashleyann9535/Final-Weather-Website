@@ -48,6 +48,14 @@ li {
   width: 90px;
 }
 
+#hourlyIcon {
+  display: block;
+  position: relative;
+  left: 30px;
+  padding: 0;
+  width: 90px;
+}
+
 .degrees {
   font-size: 80px;
   padding: 0;
@@ -58,17 +66,9 @@ li {
 }
 .active {
   color: #111d5e;
-}
-:hover .active {
-  color: #111d5e;
-  text-decoration: none;
-  cursor: default;
-}
-.inactive {
-  color: #111d5e;
   font-size: 15px;
 }
-:hover .inactive {
+:hover .active {
   color: #111d5e;
   text-decoration: none;
   cursor: default;
@@ -87,6 +87,7 @@ i {
 h5 {
   color: #1b1d45;
   font-weight: bolder;
+  font-size: 23px;
 }
 
 .info {
@@ -101,15 +102,22 @@ h5 {
 #windSpeed {
   font-size: 20px;
 }
-
+.hourly {
+  position: relative;
+  left: 210px;
+  bottom: 70px;
+  font-size: 25px;
+}
 #hourlyForecast {
   padding: 0;
   font-size: 20px;
-  border: 5px solid white;
-  border-radius: 10px;
-  background: whitesmoke;
-  max-width: 100px;
+  border: 5px solid #111d5e;
+  border-radius: 20px;
   text-align: center;
+  max-width: 50%;
+  position: relative;
+  left: 210px;
+  bottom: 70px;
 }
 .card-body {
   text-align: center;

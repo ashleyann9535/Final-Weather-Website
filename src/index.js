@@ -56,7 +56,7 @@ function displayTemp(response) {
   );
 }
 
-function dispalyHourForecast(response) {
+function displayHourForecast(response) {
   console.log(response.data);
   let hourlyForecastElement = document.querySelector("#hourlyForecast");
   hourlyForecast = null;
@@ -65,12 +65,12 @@ function dispalyHourForecast(response) {
   for (let index = 0; index < 3; index++) {
     hourlyForecast = response.data.list[index];
     hourlyForecastElement.innerHTML += `
-    <div class="row">
-    <div class="col-2">
-        <img src="#" class="card-img-top" id="hourlyIcon">
+    <div class="col">
+        <img src="http://openweathermap.org/img/wn/${
+          hourlyForecast.weather[0].icon
+        }@2x.png" class="card-img-top" id="hourlyIcon">
           <h5 class="card-title">${Math.round(hourlyForecast.main.temp)}°</h5>
           <p class="card-text">${formatTime(hourlyForecast.dt * 1000)}</p>
-    </div>
     </div>
 `;
   }
@@ -82,7 +82,7 @@ function search(city) {
   axios.get(apiUrl).then(displayTemp);
 
   apiUrlOne = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrlOne).then(dispalyHourForecast);
+  axios.get(apiUrlOne).then(displayHourForecast);
 }
 
 function formSubmit(event) {
@@ -94,8 +94,8 @@ function formSubmit(event) {
 function displayCelsius(event) {
   event.preventDefault();
   let degreesElement = document.querySelector("#degrees");
-  linkC.classList.remove("inactive");
-  linkF.classList.add("inactive");
+  linkC.classList.remove("active");
+  linkF.classList.add("active");
   let tempC = Math.round((degrees - 32) * (5 / 9));
   degreesElement.innerHTML = `${tempC}°`;
 }
@@ -103,8 +103,8 @@ function displayCelsius(event) {
 function displayFahrenheit(event) {
   event.preventDefault();
   let degreesElement = document.querySelector("#degrees");
-  linkF.classList.remove("inactive");
-  linkC.classList.add("inactive");
+  linkF.classList.remove("active");
+  linkC.classList.add("active");
   degreesElement.innerHTML = `${degrees}°`;
 }
 
