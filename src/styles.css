@@ -38,6 +38,8 @@ li {
   max-width: 250px;
   margin-bottom: 20px;
   text-align: center;
+  position: relative;
+  bottom: 15px;
 }
 
 #mainIcon {
